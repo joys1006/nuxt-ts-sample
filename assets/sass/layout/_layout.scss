@@ -1,0 +1,86 @@
+/**
+ * @summary Layout css
+ * @description 기본 레이아웃 관련
+ */
+
+body,
+#__layout,
+#__nuxt,
+#root,
+#app,
+.app-wrap {
+  height: 100%;
+}
+
+.ant-layout {
+  min-height: 100%;
+}
+
+/* 레이아웃이 없을때 */
+.is-not-Layout {
+  padding: 0 !important;
+}
+
+/* // 레이아웃이 없을때 */
+
+#container, #footer {
+  padding: 0;
+}
+
+/* 컨테이너 */
+#container {
+  min-height: 100%;
+
+  h2 {
+    margin: 0 0 16px;
+    font-size: 36px;
+    font-weight: 600;
+  }
+}
+
+#content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* // 컨테이너 */
+
+/* 푸터 */
+#Footer {
+  margin: 0 20px;
+  text-align: center;
+}
+
+/* // 푸터 */
+/* 헤더 */
+#Header {
+  background-color: #1e1e25;
+}
+
+#Header .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+
+/* // 헤더 */
+
+/* // 사이드 메뉴 */
+#App {
+  min-height: 100%;
+  flex-direction: row;
+
+  .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+  }
+}
+
+#App .trigger:hover {
+  color: #1890ff;
+}

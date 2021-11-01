@@ -1,0 +1,39 @@
+/**
+ * @summary Variables
+ * @description font-size = default -> size 16px base -> 1rem
+ */
+
+ // base (베이스css에만 적용)
+$baseFont:'Nanum Square';
+$defaultSize: 17px;
+$baseFontSize: 17px;
+$baseColor: #354052;
+$baseColorHover:#1abcb0;
+
+//fonts
+$NnBa:'Nanum Barun Gothic';
+$NnSq:'Nanum Square';
+$NnGt:'Nanum Gothic';
+
+//fontSize
+$fSize-s: 17px;
+$fSize-m: 22px;
+$fSize-l: 30px;
+$fSize-xl: 48px;
+
+// color
+$dodger-blue: #3182f6;
+$light-blue-grey: #c0d4f1;
+$dark: #1e1e25;
+$slate-grey: #585865;
+$charcoal-grey: #3b3b46;
+$battleship-grey: #747481;
+$black-4: rgba(0, 0, 0, 0.04);
+$white: #fff;
+
+
+.icn-navigation-back {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}

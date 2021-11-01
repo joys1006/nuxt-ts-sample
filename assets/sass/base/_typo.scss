@@ -1,0 +1,45 @@
+/**
+ * @summary typo
+ * @description 폰트 정의
+ */
+@charset 'utf-8';
+
+/*
+ * Nanum Square (Korean) http://hangeul.naver.com
+ */
+@include font-face('Nanum Square','./assets/fonts/NanumSquareL',$style: normal,$weight: 100);
+@include font-face('Nanum Square','./assets/fonts/NanumSquareR',$style: normal,$weight: 300);
+@include font-face('Nanum Square','./assets/fonts/NanumSquareB',$style: bold,$weight: 600);
+@include font-face('Nanum Square','./assets/fonts/NanumSquareEB',$style: bold,$weight: 900);
+
+
+// @font-face {
+//   font-family: SFProDisplay;
+//   src: local(SFProDisplay-Regular),
+//     url(/path/to/SFProDisplay-Regular.woff2) format("woff2"),
+//     url(/path/to/SFProDisplay-Regular.woff) format("woff"),
+//     url(/path/to/SFProDisplay-Regular.ttf) format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-stretch: normal;
+// }
+// @font-face {
+//   font-family: TDSiOS;
+//   src: local(TDSiOS-Regular),
+//     url(/path/to/TDSiOS-Regular.woff2) format("woff2"),
+//     url(/path/to/TDSiOS-Regular.woff) format("woff"),
+//     url(/path/to/TDSiOS-Regular.ttf) format("truetype");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-stretch: normal;
+// }
+// @font-face {
+//   font-family: TDSiOS;
+//   src: local(TDSiOS-Bold),
+//     url(/path/to/TDSiOS-Bold.woff2) format("woff2"),
+//     url(/path/to/TDSiOS-Bold.woff) format("woff"),
+//     url(/path/to/TDSiOS-Bold.ttf) format("truetype");
+//   font-weight: bold;
+//   font-style: normal;
+//   font-stretch: normal;
+// }

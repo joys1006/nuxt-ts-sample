@@ -1,0 +1,13 @@
+/**
+ * @summary button
+ * @description 디자인 버튼 스타일 정의
+ */
+
+/* 버튼 스타일 믹스인 */
+@mixin btnStyle($fontColor, $bdColor, $bgColor) {
+    font-size: $baseFontSize;
+    font-weight: 300;
+    border:1px solid $bdColor !important;
+    border-radius: 3px;
+    background-color: $bgColor !important;
+}

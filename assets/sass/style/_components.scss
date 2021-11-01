@@ -1,0 +1,110 @@
+// 키보드 자판
+.keyboard {
+	overflow: hidden;
+	button {
+		float: left;
+		width: 33.33%;
+		height: 68px;
+		&:active {
+			span {
+				color: $battleship-grey;
+			}
+		}
+	}
+	span {
+		display: block;
+		height: 100%;
+		font-size: 30px;
+		line-height: 68px;
+		vertical-align: middle;
+		color: #585865;
+		&.cancel-text {
+			font-size: 17px;
+		}
+	}
+	img {
+		display: block;
+		margin: 22px auto;
+	}
+}
+
+.counter {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	align-content: center;
+	.counter-wrapper {
+		display: block;
+		width: 50px;
+		.number {
+			display: block;
+			line-height: 30px;
+			text-align: center;
+		}
+	}
+	.counter-button-wrapper {
+		button {
+			width: 40px;
+			height: 30px;
+			font-size: $fSize-s;
+			color: $white;
+			text-align: center;
+			border-radius: 6px;
+		}
+		.counter-plus-button {
+			background-color: blue;
+		}
+		.counter-minus-button {
+			margin-left: 3px;
+			background-color: red;
+		}
+	}
+}
+
+// 스티키 헤더
+.sticky-header {
+	display: flex;
+	align-items: stretch;
+	justify-items: stretch;
+	align-content: center;
+	padding: 10px 16px;
+	.amount-text {
+		width: 100%;
+		height: 100%;
+		color: $dark;
+		text-align: center;
+		font-weight: 600;
+	}
+	.right-button {
+		width: 24px;
+	}
+}
+
+// 보내기 버튼
+.success-button {
+	display: block;
+	width: 100%;
+	height: 56px;
+	margin: 16px 0 0;
+	font-size: $fSize-s;
+	color: $white;
+	text-align: center;
+	background-color: $dodger-blue;
+	border-radius: 6px;
+	&:disabled:hover,
+	&:disabled {
+		color: $white;
+		border-color: $light-blue-grey;
+		background-color: $light-blue-grey;
+	}
+}
+
+.ant-avatar {
+	width: 40px;
+	height: 40px;
+	padding: 7px;
+	border: 1px solid rgba(0, 0, 0, 0.04);
+	img {
+		width: 100%;
+	}
+}
