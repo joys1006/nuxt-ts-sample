@@ -30,5 +30,9 @@ export default {
     'ant-design-vue/dist/antd.css',
     '@/assets/sass/main.scss'
   ],
-  loading: { color: '#0c64c1' }
+  loading: {
+    color: 'blue',
+    height: '3px',
+    throttle: 0
+  }
 };

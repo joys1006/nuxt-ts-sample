@@ -21,12 +21,17 @@
     "paths": {
       "@/*": [
         "./*"
-      ]
+      ],
+      "tslib" : ["path/to/node_modules/tslib/tslib.d.ts"]
     },
     "types": [
       "@nuxt/types",
-      "@types/node"
+      "@types/node",
+      "unplugin-vue2-script-setup/types"
     ]
+  },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
   },
   "include": [
     "**/*.ts",

@@ -2,7 +2,6 @@
  * @summary Layout css
  * @description 기본 레이아웃 관련
  */
-
 body,
 #__layout,
 #__nuxt,
@@ -14,6 +13,20 @@ body,
 
 .ant-layout {
   min-height: 100%;
+}
+
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity .5s
+}
+
+.page-enter,
+.page-leave-active,
+.layout-enter,
+.layout-leave-active {
+  opacity: 0
 }
 
 /* 레이아웃이 없을때 */
@@ -73,7 +86,7 @@ body,
 #App {
   min-height: 100%;
   flex-direction: row;
-
+  transition: all .5s cubic-bezier(.55, 0, .1, 1);
   .logo {
     height: 32px;
     background: rgba(255, 255, 255, 0.2);
