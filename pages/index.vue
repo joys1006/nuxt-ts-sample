@@ -86,6 +86,7 @@ export default class Home extends Vue {
   };
 
   layout: string = 'normal';
+  transition: string = 'fade';
 
   created(): void {
     this.init();
