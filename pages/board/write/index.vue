@@ -54,7 +54,6 @@ import PostTableRequest from '@/types/mock/PostTableRequest';
 import HomeType from '@/store/modules/home/types/HomeType';
 import HomeGetterInterface from '@/store/modules/home/getters/HomeGetterInterface';
 import HomeActionInterface from '@/store/modules/home/actions/HomeActionInterface';
-import TableResponse from '@/types/mock/TableResponse';
 
 @Component({
   name: 'BoardWrite'
