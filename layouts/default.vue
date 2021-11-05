@@ -4,7 +4,9 @@
     <a-layout id="container">
       <app-header />
       <a-layout-content id="content">
-        <nuxt />
+        <keep-alive>
+          <nuxt />
+        </keep-alive>
       </a-layout-content>
       <app-footer />
     </a-layout>

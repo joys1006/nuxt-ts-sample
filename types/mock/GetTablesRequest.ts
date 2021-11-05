@@ -1,4 +1,4 @@
-export default class MockListRequest {
+export default class GetTablesRequest {
   get size(): number {
     return this._size;
   }

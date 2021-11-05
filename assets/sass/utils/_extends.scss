@@ -46,3 +46,28 @@
 .m0 { margin:0 !important; }
 .right { text-align:right; }
 
+// margin, padding value class
+@for $j from 0 through 1 {
+  $class: 'm';
+  $property: 'margin';
+  @if $j == 1 {
+    $class: 'p';
+    $property: 'padding';
+  }
+  @for $i from 0 through 100 {
+    $i: $i + 5;
+    .#{$class}r#{$i} {
+      #{$property}-right: $i + px;
+    }
+    .#{$class}l#{$i} {
+      #{$property}-left: $i + px;
+    }
+    .#{$class}t#{$i} {
+      #{$property}-top: $i + px;
+    }
+    .#{$class}b#{$i} {
+      #{$property}-bottom: $i + px;
+    }
+  }
+}
+

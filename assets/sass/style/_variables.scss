@@ -5,8 +5,8 @@
 
  // base (베이스css에만 적용)
 $baseFont:'Nanum Square';
-$defaultSize: 17px;
-$baseFontSize: 17px;
+$defaultSize: 16px;
+$baseFontSize: 16px;
 $baseColor: #354052;
 $baseColorHover:#1abcb0;
 
@@ -16,10 +16,42 @@ $NnSq:'Nanum Square';
 $NnGt:'Nanum Gothic';
 
 //fontSize
-$fSize-s: 17px;
+$fSize-s: 16px;
 $fSize-m: 22px;
 $fSize-l: 30px;
 $fSize-xl: 48px;
+
+/* Primary - 주요색 */
+$primary-1: #354052;
+$primary-2: #475669;
+$primary-3: #2A3342;
+
+/* Gray */
+$gray-1: #474747;
+$gray-2: #707070;
+$gray-3: #999999;
+$gray-4: #ADADAD;
+$gray-5: #D6D6D6;
+$gray-6: #EBEBEB;
+$gray-7: #F5F5F5;
+$gray-8: #F8F8F8;
+$gray-9: #FAFAFA;
+$gray-10: #9F9F9F;
+
+// Neutrals (Transparent)
+$dark-1: rgba(0, 0, 0, 0.32);
+$dark-2: rgba(0, 0, 0, 0.64);
+$dark-3: rgba(0, 0, 0, 0.2);
+$dark-4: rgba(0, 0, 0, 0.16);
+$dark-5: rgba(0, 0, 0, 0.1);
+
+// Normal Color(기본컬러)
+$white: #FFFFFF;
+$black: #000000;
+
+// sns color
+$naver-color:#00c63b;
+$facebook-color:#3a589e;
 
 // color
 $dodger-blue: #3182f6;

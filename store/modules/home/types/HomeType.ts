@@ -1,6 +1,7 @@
 enum HomeType {
-  GET_MOCK_LIST = '/HOME/GET_MOCK_LIST',
-  SET_MOCK_LIST = '/HOME/SET_MOCK_LIST'
+  GET_TABLES = '/HOME/GET_TABLES',
+  SET_TABLES = '/HOME/SET_TABLES',
+  POST_TABLE = '/HOME/POST_TABLE'
 }
 
 export default HomeType;

@@ -61,6 +61,29 @@
 	}
 }
 
+.edit {
+  margin-bottom: 50px;
+  .edit-box {
+    margin-top: 20px;
+    &:first-child {
+      margin-top: 0;
+    }
+    .title {
+      margin-bottom: 10px;
+    }
+    .form {
+      .input {
+      }
+      .textarea {
+        font-size: $fSize-s !important;
+      }
+    }
+  }
+  .ant-form-explain {
+    margin-top: 3px;
+  }
+}
+
 // 스티키 헤더
 .sticky-header {
 	display: flex;

@@ -1,17 +1,28 @@
 import { Commit } from 'vuex';
+import {AxiosResponse} from 'axios';
 import HomeActionImpl from '@/store/modules/home/actions/HomeActionImpl';
-import MockListRequest from '@/types/mock/MockListRequest';
-import MockResponse from '@/types/mock/MockResponse';
+import GetTablesRequest from '@/types/mock/GetTablesRequest';
+import TableResponse from '@/types/mock/TableResponse';
 import HomeType from '@/store/modules/home/types/HomeType';
-import MockService from '@/services/apis/mock.service';
+import TableService from '@/services/apis/table.service';
+import PostTableRequest from '@/types/mock/PostTableRequest';
+
+const tableService: TableService = new TableService();
 
 class HomeAction implements HomeActionImpl {
-  [HomeType.GET_MOCK_LIST] = ({ commit }: { commit: Commit }, payload: MockListRequest): Promise<MockResponse[]> => {
-    return MockService.getMockList(payload).then((response) => {
-      commit(HomeType.SET_MOCK_LIST, response);
+  [HomeType.GET_TABLES] = ({ commit }: { commit: Commit }, payload: GetTablesRequest): Promise<AxiosResponse<TableResponse[]>> => {
+    return tableService.getTables(payload).then((response) => {
+      commit(HomeType.SET_TABLES, response.data);
       return response;
     });
   };
+
+  [HomeType.POST_TABLE] = ({ commit }: { commit: Commit }, payload: PostTableRequest): Promise<AxiosResponse<TableResponse[]>> => {
+    return tableService.postTable(payload).then((response) => {
+      commit(HomeType.SET_TABLES, response.data);
+      return response;
+    });
+  }
 }
 
 export default HomeAction;

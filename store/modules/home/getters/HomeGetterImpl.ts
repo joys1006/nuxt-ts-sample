@@ -1,13 +1,13 @@
 import { Modify } from '@/types/common';
 import HomeGetterInterface from '@/store/modules/home/getters/HomeGetterInterface';
 import HomeType from '@/store/modules/home/types/HomeType';
-import MockResponse from '@/types/mock/MockResponse';
+import TableResponse from '@/types/mock/TableResponse';
 import HomeState from '@/store/modules/home/states/HomeState';
 
 type HomeGetterImpl = Modify<
   HomeGetterInterface,
   {
-    [HomeType.GET_MOCK_LIST](state: HomeState): MockResponse[];
+    [HomeType.GET_TABLES](state: HomeState): TableResponse[];
   }
 >;
 

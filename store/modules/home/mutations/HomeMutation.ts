@@ -1,11 +1,11 @@
 import HomeMutationImpl from '@/store/modules/home/mutations/HomeMutationImpl';
 import HomeType from '@/store/modules/home/types/HomeType';
 import HomeState from '@/store/modules/home/states/HomeState';
-import MockResponse from '@/types/mock/MockResponse';
+import TableResponse from '@/types/mock/TableResponse';
 
 class HomeMutation implements HomeMutationImpl {
-  [HomeType.SET_MOCK_LIST] = (state: HomeState, data: MockResponse[]): void => {
-    state.mockList = data;
+  [HomeType.SET_TABLES] = (state: HomeState, data: TableResponse[]): void => {
+    state.tables = data.sort((a, b) => b.no - a.no);
   };
 }
 

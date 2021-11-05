@@ -11,3 +11,206 @@
     border-radius: 3px;
     background-color: $bgColor !important;
 }
+
+$width-1: 134px; // btn-50-m
+$width-2: 90px; // btn-50-s
+$width-3: 120px; // btn-40-m
+$width-4: 90px; // btn-40-s
+$height-1: 50px !important; // btn-50
+$height-2: 40px; // btn-40
+
+$primary-1: #354052;
+$primary-2: #475669;
+$primary-3: #2A3342;
+
+/* button/50/M1/ */
+.btn-50-m1 {
+  width: $width-1;
+  height: $height-1;
+  line-height: $height-1;
+  &.extended {
+    min-width: $width-1;
+    width: auto;
+  }
+  @include btnStyle($white,$primary-2,$primary-2);
+  &:focus,
+  &:hover {
+    @include btnStyle($white,$primary-3,$primary-3);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-4,$gray-5,$gray-5);
+  }
+}
+/* button/50/m2/ */
+.btn-50-m2 {
+  width: $width-1;
+  height: $height-1;
+  line-height: $height-1;
+  &.extended {
+    min-width: $width-1;
+    width: auto;
+  }
+  @include btnStyle($primary-2,$primary-1,$white);
+  &:focus,
+  &:hover {
+    @include btnStyle($primary-3,$primary-3,$gray-7);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-5,$gray-7,$white);
+  }
+}
+/* button/50/s1/ */
+.btn-50-s1 {
+  width: $width-2;
+  height: $height-1;
+  line-height: $height-1;
+  &.extended {
+    min-width: $width-2;
+    width: auto;
+  }
+  @include btnStyle($white,$primary-2,$primary-2);
+  &:focus,
+  &:hover {
+    @include btnStyle($white,$primary-3,$primary-3);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-4,$gray-7,$gray-7);
+  }
+}
+/* button/50/s2/ */
+.btn-50-s2 {
+  width: $width-2;
+  height: $height-1;
+  line-height: $height-1;
+  &.extended {
+    min-width: $width-2;
+    width: auto;
+  }
+  @include btnStyle($primary-2,$primary-2,$white);
+  &:focus,
+  &:hover {
+    @include btnStyle($primary-3,$primary-3,$gray-8);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-5,$gray-7,$white);
+  }
+}
+/* button/40/M1/ */
+.btn-40-m1 {
+  width: $width-3;
+  height: $height-2;
+  line-height: $height-2;
+  &.extended {
+    min-width: $width-3;
+    width: auto;
+  }
+  @include btnStyle($white,$primary-2,$primary-2);
+  &:focus,
+  &:hover {
+    @include btnStyle($white,$primary-3,$primary-3);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-4,$gray-7,$gray-7);
+  }
+}
+/* button/40/m2/ */
+.btn-40-m2 {
+  width: $width-3;
+  height: $height-2;
+  line-height: $height-2;
+  &.extended {
+    min-width: $width-3;
+    width: auto;
+  }
+  @include btnStyle($primary-2,$primary-1,$white);
+  &:focus,
+  &:hover {
+    @include btnStyle($primary-3,$primary-3,$gray-7);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-5,$gray-7,$white);
+  }
+}
+/* button/40/s2/ */
+.btn-40-s1 {
+  width: $width-4;
+  height: $height-2;
+  line-height: $height-2;
+  &.extended {
+    min-width: $width-4;
+    width: auto;
+  }
+  @include btnStyle($white,$primary-2,$primary-2);
+  &:focus,
+  &:hover {
+    @include btnStyle($white,$primary-3,$primary-3);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-4,$gray-7,$gray-7);
+    &:hover {
+      @include btnStyle($gray-4,$gray-7,$gray-7);
+    }
+  }
+}
+/* button/40/s2/ */
+.btn-40-s2 {
+  width: $width-4;
+  height: $height-2;
+  line-height: $height-2;
+  &.extended {
+    min-width: $width-4;
+    width: auto;
+  }
+  @include btnStyle($primary-2,$primary-1,$white);
+  &:focus,
+  &:hover {
+    @include btnStyle($primary-3,$primary-3,$gray-7);
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-5,$gray-7,$white);
+  }
+}
+/* button/30/s2/ */
+.btn-30-s2 {
+  width: 40px;
+  height: 30px !important;
+  line-height: 30px !important;
+  padding: 7px !important;
+  font-size: $fSize-s;
+  color: $primary-2 !important;
+  text-align: center;
+  font-weight: 400;
+  border:1px solid $gray-6 !important;
+  border-radius: 3px;
+  background-color: $white !important;
+  margin-right: 13px;
+  &:focus,
+  &:hover {
+    font-size: $fSize-s;
+    color: $primary-3 !important;
+    text-align: center;
+    font-weight: 400;
+    border:1px solid $primary-3 !important;
+    border-radius: 3px;
+    background-color: $gray-7 !important;
+  }
+  &.disabled,
+  &:disabled {
+    @include btnStyle($gray-5,$gray-7,$white);
+    font-size: $fSize-s;
+    color: $gray-5 !important;
+    text-align: center;
+    font-weight: 400;
+    border:1px solid $gray-7 !important;
+    border-radius: 3px;
+    background-color: $white !important;
+  }
+}

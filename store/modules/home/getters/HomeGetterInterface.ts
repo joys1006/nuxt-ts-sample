@@ -1,8 +1,8 @@
 import HomeType from '@/store/modules/home/types/HomeType';
-import MockResponse from '@/types/mock/MockResponse';
+import TableResponse from '@/types/mock/TableResponse';
 
 interface HomeGetterInterface {
-  [HomeType.GET_MOCK_LIST]: MockResponse[];
+  [HomeType.GET_TABLES]: TableResponse[];
 }
 
 export default HomeGetterInterface;

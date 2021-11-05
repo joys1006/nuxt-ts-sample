@@ -1,6 +1,6 @@
-import MockResponse from '@/types/mock/MockResponse';
+import TableResponse from '@/types/mock/TableResponse';
 import { RootState } from '@/types/common';
 
 export default class HomeState implements RootState {
-  mockList: MockResponse[] = [];
+  tables: TableResponse[] = [];
 }

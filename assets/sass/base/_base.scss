@@ -15,12 +15,13 @@ button:active {
   transform: translateY(.5px);
 }
 input,textarea{font-family:$NnGt,tahoma,Dotum,AppleGothic,sans-serif;color:$baseColor;outline:none;overflow-y:hidden; box-sizing:border-box; transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-ms-transition:.2s ease-in-out;-o-transition:.2s ease-in-out; }
-textarea{-webkit-appearance:none;-webkit-border-radius:0;border-radius:0;padding:10px 20px;border:1px solid #ddd;resize:none;}
+textarea{-webkit-appearance:none;-webkit-border-radius:0;border-radius:0;padding:10px 20px;border:1px solid #ddd;resize:none;font-size:$defaultSize;}
+textarea::placeholder{font-size: 14px !important;}
 select::-ms-expand{display:none;}
 select{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none; box-sizing:border-box; transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-ms-transition:.2s ease-in-out;-o-transition:.2s ease-in-out; }
 .selected{}
 iframe[name=google_conversion_frame]{display:none;}
-input{color:#222; box-sizing:border-box;}
+input{color:#222; box-sizing:border-box;font-size:$defaultSize;}
 input[title],
 input[type=number],
 input[type=email],

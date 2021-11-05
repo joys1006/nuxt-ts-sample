@@ -1,7 +1,7 @@
-import MockResponse from '@/types/mock/MockResponse';
 import moment from 'moment';
+import TableResponse from '@/types/mock/TableResponse';
 
-const mock: MockResponse = new MockResponse();
+const mock: TableResponse = new TableResponse();
 
 mock.no = 1;
 mock.title = `목 데이터 테스트1`;
@@ -10,6 +10,6 @@ mock.writer = '홍길동';
 mock.createdAt = moment(new Date()).format('YYYY-MM-DD');
 mock.updatedAt = moment(new Date()).format('YYYY-MM-DD');
 
-const MockList: MockResponse[] = [mock];
+const Tables: TableResponse[] = [mock];
 
-export default MockList;
+export default Tables;
