@@ -42,5 +42,8 @@ npm run lint
 - vuex
 - vuex-class
 - vue-property-decorator
-- node-sass
+- node-sass!
 - eslint + Prettier
+[Uploading 스크린샷 2021-11-18 오후 8.32.18.png…]()
+
+
