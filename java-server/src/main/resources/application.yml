@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  profiles: local
+  main:
+    allow-bean-definition-overriding: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  application:
+    name: javaserver.api
+
+database:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    jdbcUrl: jdbc:mysql://localhost:3306/todo?zeroDateTimeBeha=convertToNull&useSSL=false&characterEncoding=UTF-8&useSSL=false&autoReconnect=true
+    username: root
+    password: joys1004
