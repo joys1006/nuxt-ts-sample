@@ -14,19 +14,19 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'nuxt-property-decorator';
 import AppHeader from '@/components/Layouts/AppHeader/AppHeader.vue';
 import AppFooter from '@/components/Layouts/AppFooter/AppFooter.vue';
 import AppAside from '@/components/Layouts/AppAside/AppAside.vue';
 
 @Component({
-  name: 'Normal',
+  name: 'Default',
   components: {
     AppHeader,
     AppFooter,
     AppAside
   }
 })
-export default class Normal extends Vue {}
+export default class Default extends Vue {}
 </script>
 

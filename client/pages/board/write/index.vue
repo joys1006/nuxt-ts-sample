@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator';
+import {Component, Vue} from 'nuxt-property-decorator';
 import {Action, Getter} from 'vuex-class';
 import {WrappedFormUtils} from 'ant-design-vue/types/form/form';
 import InsertBoardRequest from '@/types/mock/InsertBoardRequest';

@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator';
+import {Component, Vue} from 'nuxt-property-decorator';
 import {Action, Getter} from 'vuex-class';
 import {Pagination} from 'ant-design-vue';
 import HomeType from '../../store/modules/home/types/HomeType';

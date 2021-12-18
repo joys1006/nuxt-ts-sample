@@ -1,11 +1,18 @@
 <template>
-  <a-layout-header id="Header" style="background: #fff; padding: 0">
-    <a-icon class="trigger" :type="collapsed ? 'menu-unfold' : 'menu-fold'" @click="asideToggleEvent" />
+  <a-layout-header id="Header">
+    <div class="header-left-area">
+      <a-icon class="trigger" :type="collapsed ? 'menu-unfold' : 'menu-fold'" @click="asideToggleEvent" />
+    </div>
+    <div class="header-right-area">
+      <div class="right-gnb-wrapper">
+        <a-button>로그아웃</a-button>
+      </div>
+    </div>
   </a-layout-header>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'nuxt-property-decorator';
 import { Getter, Mutation } from 'vuex-class';
 import TemplateType from '@/store/modules/template/types/TemplateType';
 import TemplateGetterInterface from '@/store/modules/template/getters/TemplateGetterInterface';
