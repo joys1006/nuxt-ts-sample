@@ -55,7 +55,6 @@ import InsertBoardRequest from '@/types/mock/InsertBoardRequest';
 import HomeType from '@/store/modules/home/types/HomeType';
 import HomeGetterInterface from '@/store/modules/home/getters/HomeGetterInterface';
 import HomeActionInterface from '@/store/modules/home/actions/HomeActionInterface';
-import BoardListResponse from '@/types/mock/BoardListResponse';
 
 @Component({
   name: 'BoardWrite'
