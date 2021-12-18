@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'nuxt-property-decorator';
 import { Getter, Mutation } from 'vuex-class';
 import TemplateType from '@/store/modules/template/types/TemplateType';
 import TemplateGetterInterface from '@/store/modules/template/getters/TemplateGetterInterface';

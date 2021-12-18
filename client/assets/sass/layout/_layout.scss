@@ -15,6 +15,12 @@ body,
   min-height: 100%;
 }
 
+.logo-big {
+  font-size: $fSize-xl;
+  font-weight: bold;
+  color: $accent-4;
+}
+
 .page-enter-active,
 .page-leave-active,
 .layout-enter-active,
@@ -65,20 +71,27 @@ body,
   text-align: center;
 }
 
+
 /* // 푸터 */
 /* 헤더 */
 #Header {
-  background-color: #1e1e25;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0;
+  background: #fff;
+  .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  .header-right-area {
+    padding: 0 20px;
+  }
 }
-
-#Header .trigger {
-  font-size: 18px;
-  line-height: 64px;
-  padding: 0 24px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
 
 /* // 헤더 */
 
