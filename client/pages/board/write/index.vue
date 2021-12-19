@@ -89,8 +89,8 @@ export default class BoardWrite extends Vue {
 
         this.postBoard(payload)
           .then(() => {
-            this.$message.success('게시글이 등록되었습니다.')
-              .then(this.$router.replace('/board'));
+            this.$message.success('게시글이 등록되었습니다.');
+            this.$router.replace('/board');
           })
           .catch(() => this.$message.error('등록에 실패하였습니다.'));
       }

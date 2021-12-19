@@ -82,6 +82,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
+import { WrappedFormUtils } from 'ant-design-vue/types/form/form';
 import StickyFooter from '@/components/Layouts/StickyFooter/StickyFooter.vue';
 
 @Component({

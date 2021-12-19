@@ -1,0 +1,8 @@
+enum AccountType {
+  LOGIN = '/ACCOUNT/LOGIN',
+  SET_LOGIN_TOKEN = '/ACCOUNT/SET_LOGIN_TOKEN',
+  REGISTER = '/ACCOUNT/REGISTER',
+  UNREGISTER = '/ACCOUNT/UNREGISTER'
+}
+
+export default AccountType;
