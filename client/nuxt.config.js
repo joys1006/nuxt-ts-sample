@@ -18,7 +18,7 @@ export default {
   },
   proxy: {
     // https://github.com/joys1006/springboot-sample-project
-    "/api": "http://localhost:8080",
+    "/v1": "http://localhost:8080",
   },
   plugins: [
     '@/plugins/antd-ui',
@@ -26,7 +26,8 @@ export default {
   ],
   components: true,
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['cookie-universal-nuxt', { alias: 'cookiz' }]
   ],
   buildModules: [
     '@nuxtjs/composition-api/module',

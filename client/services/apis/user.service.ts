@@ -12,7 +12,8 @@ export default class UserService extends BaseService {
    * @return Promise<AxiosResponse<string>> 토큰 값
    */
   public signIn(payload: SignInRequest): Promise<AxiosResponse<SignInResponse>> {
-    return this.http.post("/v1/users/sign-in", payload);
+    const body: Object = this.bodyKeyConverter(payload);
+    return this.http.post("/v1/users/sign-in", body);
   }
 
   /**

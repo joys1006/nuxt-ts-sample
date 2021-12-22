@@ -5,6 +5,7 @@ import { Dictionary, RootState } from '@/types/common';
 // Modules
 import HomeStoreModule from '@/store/modules/home';
 import TemplateStoreModule from '@/store/modules/template';
+import AccountStoreModule from '@/store/modules/account';
 
 Vue.use(Vuex);
 
@@ -38,6 +39,7 @@ const store: StoreOptions<RootState> = {
   },
   modules: {
     HomeStoreModule,
+    AccountStoreModule,
     TemplateStoreModule
   }
 };

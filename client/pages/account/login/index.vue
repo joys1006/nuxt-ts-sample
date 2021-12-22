@@ -81,9 +81,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Action, Component } from 'nuxt-property-decorator';
 import { WrappedFormUtils } from 'ant-design-vue/types/form/form';
+import { Mixins } from 'vue-property-decorator';
 import StickyFooter from '@/components/Layouts/StickyFooter/StickyFooter.vue';
+import AccountType from '@/store/modules/account/types/AccountType';
+import AccountActionInterface from '@/store/modules/account/actions/AccountActionInterface';
+import SignInRequest from '@/types/apis/request/user/SignInRequest';
+import MessageMixin from '@/common/mixins/MessageMixin';
 
 @Component({
   name: 'Login',
@@ -92,7 +97,13 @@ import StickyFooter from '@/components/Layouts/StickyFooter/StickyFooter.vue';
     StickyFooter
   }
 })
-export default class Login extends Vue {
+export default class Login extends Mixins(
+  MessageMixin
+) {
+
+  @Action(AccountType.LOGIN)
+  private signIn!: AccountActionInterface[AccountType.LOGIN];
+
   public form!: WrappedFormUtils;
   // 저장 체크
   public isSave: boolean = false;
@@ -105,7 +116,19 @@ export default class Login extends Vue {
     this.form = this.$form.createForm(this, { name: 'loginForm' });
   }
 
-  private login(): void {
+  private async login(): Promise<void> {
+    const request: SignInRequest = new SignInRequest();
+
+    request.userId = this.form.getFieldValue("userId");
+    request.password = this.form.getFieldValue("password");
+
+    try {
+      await this.signIn(request);
+      await this.$message.success('로그인 되었습니다.');
+      this.$router.push('Home');
+    } catch (error) {
+      this.promiseErrorMessageHandler(error);
+    }
   }
 
   /**
