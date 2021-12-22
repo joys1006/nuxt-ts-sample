@@ -48,14 +48,13 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'vue-property-decorator';
+import {Component, Vue} from 'nuxt-property-decorator';
 import {Action, Getter} from 'vuex-class';
 import {WrappedFormUtils} from 'ant-design-vue/types/form/form';
 import InsertBoardRequest from '@/types/mock/InsertBoardRequest';
 import HomeType from '@/store/modules/home/types/HomeType';
 import HomeGetterInterface from '@/store/modules/home/getters/HomeGetterInterface';
 import HomeActionInterface from '@/store/modules/home/actions/HomeActionInterface';
-import BoardListResponse from '@/types/mock/BoardListResponse';
 
 @Component({
   name: 'BoardWrite'
@@ -90,8 +89,8 @@ export default class BoardWrite extends Vue {
 
         this.postBoard(payload)
           .then(() => {
-            this.$message.success('게시글이 등록되었습니다.')
-              .then(this.$router.replace('/board'));
+            this.$message.success('게시글이 등록되었습니다.');
+            this.$router.replace('/board');
           })
           .catch(() => this.$message.error('등록에 실패하였습니다.'));
       }

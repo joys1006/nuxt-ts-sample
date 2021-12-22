@@ -17,7 +17,8 @@ export default {
     ]
   },
   proxy: {
-    "/api": "http://localhost:9999",
+    // https://github.com/joys1006/springboot-sample-project
+    "/v1": "http://localhost:8080",
   },
   plugins: [
     '@/plugins/antd-ui',
@@ -41,5 +42,8 @@ export default {
     color: 'blue',
     height: '3px',
     throttle: 0
+  },
+  router: {
+    middleware: 'auth'
   }
 };

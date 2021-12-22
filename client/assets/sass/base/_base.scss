@@ -21,7 +21,26 @@ select::-ms-expand{display:none;}
 select{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none; box-sizing:border-box; transition:.2s ease-in-out;-webkit-transition:.2s ease-in-out;-moz-transition:.2s ease-in-out;-ms-transition:.2s ease-in-out;-o-transition:.2s ease-in-out; }
 .selected{}
 iframe[name=google_conversion_frame]{display:none;}
-input{color:#222; box-sizing:border-box;font-size:$defaultSize;}
+input,
+textarea {
+  border:1px solid $gray-5;
+  color: $primary-3;
+  &:focus,
+  &:hover {
+    border-color: $primary-3 !important;
+    box-shadow: 0 0 0 !important;
+  }
+  &:disabled {
+    color: $gray-4;
+    border-color: $gray-5 !important;
+    background-color: $gray-9;
+  }
+  &:read-only {
+    color: $primary-3;
+    border-color: $gray-5 !important;
+    background-color: $gray-9;
+  }
+}
 input[title],
 input[type=number],
 input[type=email],
@@ -63,3 +82,7 @@ table{border-spacing:0;border:0;width:100%;border-collapse:collapse;}
 caption { display:none; }
 .input-box-default-text{color:#515151 !important;letter-spacing:-1.5px;}
 strong{font-weight:bold;}
+a:link,
+a:visited,
+a:active{}
+a:hover { color:#F7323F; }

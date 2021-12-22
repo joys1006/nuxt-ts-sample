@@ -10,6 +10,7 @@ import BoardListResponse from '@/types/mock/BoardListResponse';
 const boardService: BoardService = new BoardService();
 
 class HomeAction implements HomeActionImpl {
+
   [HomeType.GET_BOARDS] = ({ commit }: { commit: Commit }, payload: BoardListRequest): Promise<AxiosResponse<BoardListResponse>> => {
     return boardService.getBoards(payload).then((response) => {
       commit(HomeType.SET_BOARDS, response.data);

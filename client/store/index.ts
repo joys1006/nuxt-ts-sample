@@ -5,6 +5,7 @@ import { Dictionary, RootState } from '@/types/common';
 // Modules
 import HomeStoreModule from '@/store/modules/home';
 import TemplateStoreModule from '@/store/modules/template';
+import AccountStoreModule from '@/store/modules/account';
 
 Vue.use(Vuex);
 
@@ -32,12 +33,13 @@ const logger = createLogger({
 const store: StoreOptions<RootState> = {
   // @ts-ignore
   namespaced: true,
-  plugins: debug ? [logger] : [],
+  // plugins: debug ? [logger] : [],
   state: {
     version: '1.0.0' // a simple property
   },
   modules: {
     HomeStoreModule,
+    AccountStoreModule,
     TemplateStoreModule
   }
 };

@@ -44,7 +44,7 @@ export default class BaseService {
         let result = null;
 
         if (Number(status) === 200) {
-          result = response;
+          result = response.data;
         } else {
           const error = {
             status: status || 500,

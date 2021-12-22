@@ -1,0 +1,95 @@
+#Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 70px 0 0;
+  .title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 50px;
+  }
+  .card-wrapper {
+    .card-contents {
+      width: 440px;
+    }
+    display: flex;
+    justify-content: center;
+  }
+  .button-wrapper {
+    a {
+      color: $accent-4;
+      text-decoration: underline !important;
+    }
+  }
+  .form-wrapper {
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    .form-item {
+      margin-bottom: 10px;
+    }
+    .login-save-box {
+      margin: 0;
+      color: $gray-2;
+    }
+    .input-id-box {
+      margin-bottom: 10px;
+    }
+    .login-button-box {
+      margin-bottom: 16px;
+    }
+    .input-password-box {
+      margin-bottom: 50px;
+    }
+    .input-box {
+      height: 56px;
+      border: solid 1px #d6d6d6;
+      font-size: 16px;
+    }
+    .ant-form-item-control-wrapper {
+      width: 100%;
+    }
+    .form-btn {
+      width: 100%;
+      height: 50px;
+      @include btnStyle($white,$primary-2,$primary-2);
+      &:focus,
+      &:hover {
+        @include btnStyle($white,$primary-3,$primary-3);
+      }
+      &:disabled {
+        @include btnStyle($gray-5,$gray-7,$gray-7);
+      }
+    }
+    .ant-form-item-control {
+      line-height: 0px;
+    }
+    .checkbox-label {
+      color: $gray-2;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+  }
+  .contents-wrapper {
+    display: flex;
+    justify-content: center;
+    .contents {
+      .text {
+        color: $gray-2;
+        margin-right: 12px;
+      }
+      a {
+        margin-right: 10px;
+      }
+      margin-top: 30px;
+      justify-content: flex-start;
+    }
+  }
+}
