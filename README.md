@@ -2,7 +2,8 @@
 # vue typescript nuxt sample or node mock api server
 ```
 view - http://localhost: 3000
-api server - http://localhost: 9999
+api server - https://github.com/joys1006/springboot-sample-project
+mock api server - http://localhost: 9999
 ```
 ## Project setup
 ```
