@@ -26,8 +26,7 @@ export default {
   ],
   components: true,
   modules: [
-    '@nuxtjs/axios',
-    ['cookie-universal-nuxt', { alias: 'cookiz' }]
+    '@nuxtjs/axios'
   ],
   buildModules: [
     '@nuxtjs/composition-api/module',
@@ -43,5 +42,8 @@ export default {
     color: 'blue',
     height: '3px',
     throttle: 0
+  },
+  router: {
+    middleware: 'auth'
   }
 };

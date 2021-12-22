@@ -124,8 +124,8 @@ export default class Login extends Mixins(
 
     try {
       await this.signIn(request);
+      await this.$router.push('/');
       await this.$message.success('로그인 되었습니다.');
-      this.$router.push('Home');
     } catch (error) {
       this.promiseErrorMessageHandler(error);
     }

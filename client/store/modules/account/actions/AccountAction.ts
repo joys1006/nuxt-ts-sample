@@ -8,8 +8,23 @@ import RegisterRequest from '@/types/apis/request/user/RegisterRequest';
 import SignInResponse from '@/types/apis/response/user/SignInResponse';
 
 const userService: UserService = new UserService();
+// const cookieparser = process.server ? require('cookieparser') : undefined;
 
 class AccountAction implements AccountActionImpl {
+
+  // nuxtServerInit({ commit }: { commit: Commit }, { req } : { req: Request }) {
+  //   let auth = null;
+  //   if (req.headers.cookie) {
+  //     const parsed = cookieparser.parse(req.headers.cookie);
+  //     try {
+  //       auth = JSON.parse(parsed.auth);
+  //       console.log(auth);
+  //     } catch (err) {
+  //       // No valid cookie found
+  //     }
+  //   }
+  //   commit(AccountType.SET_LOGIN_TOKEN, auth);
+  // }
 
   /**
    * 로그인 Action
@@ -20,8 +35,7 @@ class AccountAction implements AccountActionImpl {
   [AccountType.LOGIN] = ({ commit }: { commit: Commit }, payload: SignInRequest): Promise<AxiosResponse<SignInResponse>> => {
     return userService.signIn(payload)
       .then((response) => {
-        console.log(response);
-        commit(AccountType.SET_LOGIN_TOKEN, response.data);
+        commit(AccountType.SET_LOGIN_TOKEN, response.data.token);
         return response;
       });
   }
