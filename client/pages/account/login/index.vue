@@ -61,6 +61,8 @@
               <a-checkbox v-model="isSave"
                           class="checkbox-label">아이디 저장
               </a-checkbox>
+              <nuxt-link to="/account/register"
+                         class="register-button">회원가입</nuxt-link>
             </a-form-item>
           </a-form>
         </div>
@@ -71,8 +73,8 @@
     <div class="contents-wrapper">
       <div class="contents button-wrapper">
         <span class="text">아이디 또는 비밀번호를 잊었나요?</span>
-        <nuxt-link :to="{ name: 'FindId' }">아이디 찾기</nuxt-link>
-        <nuxt-link :to="{ name: 'FindPassword' }">비밀번호 찾기</nuxt-link>
+        <nuxt-link to="/account/find/id">아이디 찾기</nuxt-link>
+        <nuxt-link to="/account/find/password">비밀번호 찾기</nuxt-link>
       </div>
     </div>
     <!-- // 버튼 영역 -->

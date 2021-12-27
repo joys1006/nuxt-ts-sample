@@ -56,14 +56,14 @@ export default class MessageMixin extends Vue {
         config.content = $el('p', error.message);
       }
 
-    }
+      if (error.status > 400) {
+        this.$confirm(config);
+      } else {
+        config.okText = '확인';
+        config.onOk = () => {};
+        this.$error(config);
+      }
 
-    if (error.status > 400) {
-      this.$confirm(config);
-    } else {
-      config.okText = '확인';
-      config.onOk = () => {};
-      this.$error(config);
     }
   }
 }
