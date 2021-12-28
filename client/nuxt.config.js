@@ -30,6 +30,12 @@ export default {
   ],
   buildModules: [
     '@nuxtjs/composition-api/module',
+    [
+      'unplugin-auto-import/nuxt',
+      {
+        imports: ['@nuxtjs/composition-api'],
+      },
+    ],
     '@nuxtjs/style-resources',
     '@nuxtjs/proxy',
     '@nuxt/typescript-build'
